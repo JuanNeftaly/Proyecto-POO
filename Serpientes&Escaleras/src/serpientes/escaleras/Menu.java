@@ -27,21 +27,55 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        btnJugarPVE = new javax.swing.JButton();
+        btnConfig = new javax.swing.JButton();
+        btnJugarPVP = new javax.swing.JButton();
+        lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Serpientes y Escaleras");
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 880, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 427, Short.MAX_VALUE)
-        );
+        btnJugarPVE.setBackground(new java.awt.Color(0, 0, 0));
+        btnJugarPVE.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        btnJugarPVE.setForeground(new java.awt.Color(255, 255, 255));
+        btnJugarPVE.setText("Un Jugador");
+        btnJugarPVE.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnJugarPVE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJugarPVEActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnJugarPVE, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 140, 40));
+
+        btnConfig.setBackground(new java.awt.Color(0, 0, 0));
+        btnConfig.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        btnConfig.setForeground(new java.awt.Color(255, 255, 255));
+        btnConfig.setText("Configuracion");
+        btnConfig.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnConfig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfigActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 140, 40));
+
+        btnJugarPVP.setBackground(new java.awt.Color(0, 0, 0));
+        btnJugarPVP.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        btnJugarPVP.setForeground(new java.awt.Color(255, 255, 255));
+        btnJugarPVP.setText("Dos Jugadores");
+        btnJugarPVP.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnJugarPVP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJugarPVPActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnJugarPVP, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 140, 40));
+
+        lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.gif"))); // NOI18N
+        lblFondo.setLabelFor(jPanel1);
+        jPanel1.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -56,6 +90,18 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnJugarPVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarPVEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnJugarPVEActionPerformed
+
+    private void btnConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfigActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfigActionPerformed
+
+    private void btnJugarPVPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarPVPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnJugarPVPActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,6 +139,10 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnConfig;
+    private javax.swing.JButton btnJugarPVE;
+    private javax.swing.JButton btnJugarPVP;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblFondo;
     // End of variables declaration//GEN-END:variables
 }
