@@ -15,6 +15,8 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -97,6 +99,11 @@ public class Menu extends javax.swing.JFrame {
 
     private void btnConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfigActionPerformed
         // TODO add your handling code here:
+        VentanaConfig ventanaConfig = new VentanaConfig();
+        
+        ventanaConfig.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_btnConfigActionPerformed
 
     private void btnJugarPVPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarPVPActionPerformed
