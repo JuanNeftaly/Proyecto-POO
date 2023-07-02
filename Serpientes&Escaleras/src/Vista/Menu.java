@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-package serpientes.escaleras;
+package Vista;
+import Consultas.*;
+import javax.swing.ImageIcon;
 
 /**
- *
  * @author juanc
  */
 public class Menu extends javax.swing.JFrame {
@@ -15,6 +12,9 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.setIconImage(new ImageIcon(getClass().getResource("/imagenes/Serpiente.jpg")).getImage());
     }
 
     /**
@@ -26,16 +26,17 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        pnlMenu = new javax.swing.JPanel();
         btnJugarPVE = new javax.swing.JButton();
-        btnConfig = new javax.swing.JButton();
         btnJugarPVP = new javax.swing.JButton();
-        lblFondo = new javax.swing.JLabel();
+        btnConsulta = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Serpientes y Escaleras");
+        setTitle("Serpientes & Escaleras");
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnJugarPVE.setBackground(new java.awt.Color(0, 0, 0));
         btnJugarPVE.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
@@ -47,19 +48,7 @@ public class Menu extends javax.swing.JFrame {
                 btnJugarPVEActionPerformed(evt);
             }
         });
-        jPanel1.add(btnJugarPVE, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 140, 40));
-
-        btnConfig.setBackground(new java.awt.Color(0, 0, 0));
-        btnConfig.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
-        btnConfig.setForeground(new java.awt.Color(255, 255, 255));
-        btnConfig.setText("Configuracion");
-        btnConfig.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnConfig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfigActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 140, 40));
+        pnlMenu.add(btnJugarPVE, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 140, 40));
 
         btnJugarPVP.setBackground(new java.awt.Color(0, 0, 0));
         btnJugarPVP.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
@@ -71,21 +60,44 @@ public class Menu extends javax.swing.JFrame {
                 btnJugarPVPActionPerformed(evt);
             }
         });
-        jPanel1.add(btnJugarPVP, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 140, 40));
+        pnlMenu.add(btnJugarPVP, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 140, 40));
 
-        lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.gif"))); // NOI18N
-        lblFondo.setLabelFor(jPanel1);
-        jPanel1.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        btnConsulta.setBackground(new java.awt.Color(0, 0, 0));
+        btnConsulta.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        btnConsulta.setForeground(new java.awt.Color(255, 255, 255));
+        btnConsulta.setText("Consultas");
+        btnConsulta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultaActionPerformed(evt);
+            }
+        });
+        pnlMenu.add(btnConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 140, 40));
+
+        btnSalir.setBackground(new java.awt.Color(0, 0, 0));
+        btnSalir.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalir.setText("Salir");
+        btnSalir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+        pnlMenu.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 140, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.gif"))); // NOI18N
+        pnlMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -93,15 +105,32 @@ public class Menu extends javax.swing.JFrame {
 
     private void btnJugarPVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarPVEActionPerformed
         // TODO add your handling code here:
+        Configuraciones config = new Configuraciones(1);
+        
+        config.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_btnJugarPVEActionPerformed
-
-    private void btnConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfigActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnConfigActionPerformed
 
     private void btnJugarPVPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarPVPActionPerformed
         // TODO add your handling code here:
+        Configuraciones config = new Configuraciones(2);
+        
+        config.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_btnJugarPVPActionPerformed
+
+    private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
+        // TODO add your handling code here:
+        MenuConsulta NewFrame = new MenuConsulta();
+        NewFrame.setVisible(true);
+    }//GEN-LAST:event_btnConsultaActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,10 +168,11 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnConfig;
+    private javax.swing.JButton btnConsulta;
     private javax.swing.JButton btnJugarPVE;
     private javax.swing.JButton btnJugarPVP;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblFondo;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel pnlMenu;
     // End of variables declaration//GEN-END:variables
 }
